@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zodiac</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Reuben's Zodiac System!</h1>
+    </header>
+    <main>
+        <aside class="formArea">
+            <h2>Enter your Birthday:</h2>
+            <input type="date" id="birthDate">
+            <button onclick="getDate()">Click to find your sign!</button>
+            <h3>Your sign is:  <b id="userSign"></b></h3>
+        </aside>
+
+        <div class="signs">
+            <section class="signRow">
+                <div onclick="activeSign('Aries')"><h2>Aries</h2></div>
+                <div onclick="activeSign('Taurus')"><h2>Taurus</h2></div>
+                <div onclick="activeSign('Gemini')"><h2>Gemini</h2></div>
+                <div onclick="activeSign('Cancer')"><h2>Cancer</h2></div>
+            </section>
+            
+            <section class="signRow">
+                <div onclick="activeSign('Leo')"><h2>Leo</h2></div>
+                <div onclick="activeSign('Virgo')"><h2>Virgo</h2></div>
+                <div onclick="activeSign('Libra')"><h2>Libra</h2></div>
+                <div onclick="activeSign('Scorpio')"><h2>Scorpio</h2></div>
+            </section>
+
+            <section class="signRow">
+                <div onclick="activeSign('Sagittarius')"><h2>Sagittarius</h2></div>
+                <div onclick="activeSign('Capricorn')"><h2>Capricorn</h2></div>
+                <div onclick="activeSign('Aquarius')"><h2>Aquarius</h2></div>
+                <div onclick="activeSign('Pisces')"><h2>Pisces</h2></div>
+            </section>
+        </div>
+
+        <article class="card">
+            <h2>SIGN PLACEHOLDER</h2>
+            <img src="" alt="placeholder">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore facilis, alias repellat, consequuntur ad dolorum esse animi laudantium hic vero sed praesentium non, incidunt omnis reiciendis odit exercitationem sunt rem?
+            Enim iusto repudiandae, aperiam recusandae blanditiis velit! Numquam aspernatur ipsa ut corrupti harum in ducimus iure totam quisquam voluptatum laudantium, deleniti, architecto inventore blanditiis, consequatur vel impedit. Nihil, dolore quas.</p>
+        </article>
+    </main>
+    <script src="script/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+* { /* Calculating the size of boxes, resetting margin to 0 */
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+html {
+    /* Colors */
+    --main-background: #05061f;
+    --text-color: #FFFFFF;
+
+    /* Fonts */
+
+    /* Miscellaneous */
+    --rhythm: 2rem;
+    font-size: 100%;
+}
+
+header {
+    text-align: center;
+}
+
+article {
+    width: 30vw;
+    float: right;
+    margin: 2rem;
+    background-color: lightblue;
+    height: max-content;
+}
+
+.formArea {
+    width: 60vw;
+}
+
+.signs {
+    width: 60vw;
+    float: left;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #05061f;
+}
+
+.signs > section div{
+    background-color: blue;
+    color: white;
+    text-align: center;
+    width: 15.190972222222221vw;
+    height: 31.76043557168784vh;
+    border: 1px solid white;
+    margin: 1.8vw;
+}
+
+.card > h2, .card > p {
+    text-align: center;
+}
+
+.card > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 36.29764065335753vh;
+    height: 17.36111111111111vw;
+}
