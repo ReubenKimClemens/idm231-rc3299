@@ -1,26 +1,4 @@
 /*
-The function getDate() is activated when the user clicks the button 
-that says 'Click to find your sign!'. The purpose of this function 
-is to take the date inputted from the form and split it into usable 
-parts (year, month, day) for the other functions. It utilizes 
-querySelector to get value and split() to seperate the data
-*/
-function getDate() {
-    const userDate = document.querySelector('#birthDate').value;
-    const yearMonthDay = userDate.split('-');
-    const month = Number(yearMonthDay[1]);
-    const day = Number(yearMonthDay[2]);
-
-    // Calling to fignSign() with month and day in its parameters
-    // It then returns a string value that defines the variable yourSign 
-    const yourSign = findSign(month, day);
-
-    // Calling activeSign() using the variable yourSign which is a string
-    // It will put the relevant information to the sign on the card
-    activeSign(yourSign);
-}
-
-/*
 'sign' is an array of objects. Each object represents a sign and contains 4
 different properties. The first two, 'first' and 'last' represent the max
 or minimum month and day the sign applies. 'sign' is the name of the symbol
@@ -101,6 +79,41 @@ const signs = [
         text: "If you are looking to escape the mundane everyday grind, a Pisces’s imaginative mind can whisk you away into a realm of fantasy. Their kind, nurturing personality can prove to be a double-edged sword though, because their overtly sensitive heart is easily wounded, further compounded by a tendency to play the victim."
     },
 ]
+
+document.querySelector('#signButton').addEventListener('click', getDate, false);
+const clickedSign = document.querySelectorAll('.signs section div');
+
+let i = 0;
+for (const sign of clickedSign) {
+    if (sign.textContent == signs[i].sign) {
+        sign.addEventListener('click', function(){
+            activeSign(sign.textContent);
+        }, false);
+    }
+    i++;
+}
+
+/*
+The function getDate() is activated when the user clicks the button 
+that says 'Click to find your sign!'. The purpose of this function 
+is to take the date inputted from the form and split it into usable 
+parts (year, month, day) for the other functions. It utilizes 
+querySelector to get value and split() to seperate the data
+*/
+function getDate() {
+    const userDate = document.querySelector('#birthDate').value;
+    const yearMonthDay = userDate.split('-');
+    const month = Number(yearMonthDay[1]);
+    const day = Number(yearMonthDay[2]);
+
+    // Calling to fignSign() with month and day in its parameters
+    // It then returns a string value that defines the variable yourSign 
+    const yourSign = findSign(month, day);
+
+    // Calling activeSign() using the variable yourSign which is a string
+    // It will put the relevant information to the sign on the card
+    activeSign(yourSign);
+}
 
 /*
 The function findSign() contains the parameters 'month' and 'day' value is
