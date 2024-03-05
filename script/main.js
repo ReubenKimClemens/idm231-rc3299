@@ -19,20 +19,6 @@ function getDate() {
     activeSign(yourSign);
 }
 
-/*
-The function findingSign(month, day) currently activates due to being
-called in getDate(). Its purpose is to return the zodiac sign the user
-is in by utilizing multiple if statements that contain conditions that 
-relate to the individual signs. the parameters 'month' and 'day' value
-is exactly like the name implies. Their used for the conditions.
-*/
-
-let objectSigns = {
-    firstMonthDate: [[3, 21],[4, 20],[5, 21],[6, 21],[7, 23],[8, 23],[9, 23],[10, 23],[11, 22],[12, 22],[1, 20],[2, 19]],
-    secondMonthDate: [[4, 19],[5, 20],[6, 20],[7, 22],[8, 22],[9, 22],[10, 22],[11, 21],[12, 21],[1, 19],[2, 18],[3, 20]],
-    sign: ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces']
-}
-
 const signs = [
     {
         first: [3, 21],
@@ -108,16 +94,6 @@ const signs = [
     },
 ]
 
-console.log(testObject);
-
-function testObject() {
-    for (let i = 0; i < 12; i++) {
-        console.log(testObject.firstMonthDate[i]);
-        console.log(testObject.secondMonthDate[i]);
-        console.log(testObject.sign[i]);
-    }
-}
-
 function findSign(month, day) {
     for (let i = 0; i < 12; i++) {
         console.log(signs);
@@ -127,6 +103,50 @@ function findSign(month, day) {
     }
 }
 
+function userSignActive(sign) {
+    // Here is where the code that shows the user's sign is
+    const title = document.querySelector('.card h2');
+    const description = document.querySelector('.card p');
+    if (sign == 'Scorpio') {
+        title.textContent = "Scorpio";
+        description.textContent = "scorpio";
+    }
+}
+
+function activeSign(sign) {
+    const title = document.querySelector('.card h2');
+    const description = document.querySelector('.card p');
+    const image = document.querySelector('.card img');
+    for (let i = 0; i < 12; i++) {
+        if (sign == signs[i].sign) {
+            title.textContent = signs[i].sign;
+            description.textContent = signs[i].text;
+            image.src = `images/${signs[i].sign}.jpg`;
+
+        }
+    }
+}
+
+/*
+let objectSigns = {
+    firstMonthDate: [[3, 21],[4, 20],[5, 21],[6, 21],[7, 23],[8, 23],[9, 23],[10, 23],[11, 22],[12, 22],[1, 20],[2, 19]],
+    secondMonthDate: [[4, 19],[5, 20],[6, 20],[7, 22],[8, 22],[9, 22],[10, 22],[11, 21],[12, 21],[1, 19],[2, 18],[3, 20]],
+    sign: ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces']
+}
+
+function testObject() {
+    for (let i = 0; i < 12; i++) {
+        console.log(testObject.firstMonthDate[i]);
+        console.log(testObject.secondMonthDate[i]);
+        console.log(testObject.sign[i]);
+    }
+}
+
+The function findingSign(month, day) currently activates due to being
+called in getDate(). Its purpose is to return the zodiac sign the user
+is in by utilizing multiple if statements that contain conditions that 
+relate to the individual signs. the parameters 'month' and 'day' value
+is exactly like the name implies. Their used for the conditions.
 function findingSign(month, day) {
     if ((month == 3 && day >= 21) || (month == 4 && day <=19)) {
         return 'Aries'
@@ -165,31 +185,4 @@ function findingSign(month, day) {
         return 'Pisces'
     }
 }
-
-function userSignActive(sign) {
-    // Here is where the code that shows the user's sign is
-    const title = document.querySelector('.card h2');
-    const description = document.querySelector('.card p');
-    if (sign == 'Scorpio') {
-        title.textContent = "Scorpio";
-        description.textContent = "scorpio";
-    }
-}
-
-function activeSign(sign) {
-    const title = document.querySelector('.card h2');
-    const description = document.querySelector('.card p');
-    const image = document.querySelector('.card img');
-    for (let i = 0; i < 12; i++) {
-        if (sign == signs[i].sign) {
-            title.textContent = signs[i].sign;
-            description.textContent = signs[i].text;
-            image.src = `images/${signs[i].sign}.jpg`;
-
-        }
-    }
-}
-
-function closeUserSign() {
-    // Here is where the code that closes out of the user sign info
-}
+*/
