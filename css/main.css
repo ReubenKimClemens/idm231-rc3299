@@ -43,8 +43,9 @@ article {
     background-color: blue;
     color: white;
     text-align: center;
-    width: 15.190972222222221vw;
-    height: 31.76043557168784vh;
+    font-size: .75rem;
+    width: 7.59548611vw;
+    height: 15.8802178vh;
     border: 1px solid white;
     margin: 1.8vw;
 }
