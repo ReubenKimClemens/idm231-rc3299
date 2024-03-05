@@ -1,5 +1,3 @@
-let yearMonthDay;
-
 /*
 The function getDate() is activated when the user clicks the button 
 that says 'Click to find your sign!'. The purpose of this function 
@@ -9,16 +7,26 @@ querySelector to get value and split() to seperate the data
 */
 function getDate() {
     const userDate = document.querySelector('#birthDate').value;
-    yearMonthDay = userDate.split('-');
+    const yearMonthDay = userDate.split('-');
     const month = Number(yearMonthDay[1]);
     const day = Number(yearMonthDay[2]);
 
+    // Calling to fignSign() with month and day in its parameters
+    // It then returns a string value that defines the variable yourSign 
     const yourSign = findSign(month, day);
-    document.querySelector('#userSign').textContent = yourSign;
 
+    // Calling activeSign() using the variable yourSign which is a string
+    // It will put the relevant information to the sign on the card
     activeSign(yourSign);
 }
 
+/*
+'sign' is an array of objects. Each object represents a sign and contains 4
+different properties. The first two, 'first' and 'last' represent the max
+or minimum month and day the sign applies. 'sign' is the name of the symbol
+and 'text' is the description of the symbol. This array is used in findSign()
+and activeSign
+*/
 const signs = [
     {
         first: [3, 21],
@@ -94,15 +102,41 @@ const signs = [
     },
 ]
 
+/*
+The function findSign() contains the parameters 'month' and 'day' value is
+exactly like the name implies. This function is currently activated when its
+called by getDate(). The purpose of findSign() is finding the specific sign
+related to the month and day inputted. It does this by first running a for 
+loop that repeats 12 times. Each instance it will check an if statement that
+compares the month and day to each signs respective range. If the month/day
+is in a signs range, it will return the related name of the sign and stop
+the for loop.
+*/
 function findSign(month, day) {
     for (let i = 0; i < 12; i++) {
-        console.log(signs);
         if ((month == signs[i].first[0] && day >= signs[i].first[1]) || (month == signs[i].last[0] && day <= signs[i].last[1])) {
             return signs[i].sign
         }
     }
 }
 
+/*
+
+*/
+function activeSign(sign) {
+    const title = document.querySelector('.card h2');
+    const description = document.querySelector('.card p');
+    const image = document.querySelector('.card img');
+    for (let i = 0; i < 12; i++) {
+        if (sign == signs[i].sign) {
+            title.textContent = signs[i].sign;
+            description.textContent = signs[i].text;
+            image.src = `images/${signs[i].sign}.jpg`;
+        }
+    }
+}
+
+/*
 function userSignActive(sign) {
     // Here is where the code that shows the user's sign is
     const title = document.querySelector('.card h2');
@@ -113,21 +147,6 @@ function userSignActive(sign) {
     }
 }
 
-function activeSign(sign) {
-    const title = document.querySelector('.card h2');
-    const description = document.querySelector('.card p');
-    const image = document.querySelector('.card img');
-    for (let i = 0; i < 12; i++) {
-        if (sign == signs[i].sign) {
-            title.textContent = signs[i].sign;
-            description.textContent = signs[i].text;
-            image.src = `images/${signs[i].sign}.jpg`;
-
-        }
-    }
-}
-
-/*
 let objectSigns = {
     firstMonthDate: [[3, 21],[4, 20],[5, 21],[6, 21],[7, 23],[8, 23],[9, 23],[10, 23],[11, 22],[12, 22],[1, 20],[2, 19]],
     secondMonthDate: [[4, 19],[5, 20],[6, 20],[7, 22],[8, 22],[9, 22],[10, 22],[11, 21],[12, 21],[1, 19],[2, 18],[3, 20]],
