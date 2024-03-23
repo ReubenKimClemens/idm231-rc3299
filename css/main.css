@@ -5,7 +5,7 @@
 
 html {
     /* Colors */
-    --main-background: #05061f;
+    --main-background: #1c0707;
     --text-color: #FFFFFF;
 
     /* Fonts */
@@ -13,6 +13,11 @@ html {
     /* Miscellaneous */
     --rhythm: 2rem;
     font-size: 100%;
+}
+
+body {
+    background-color: var(--main-background);
+    color: var(--text-color);
 }
 
 .col-1 div {
@@ -89,6 +94,10 @@ header {
 .help {
     display: flex;
     flex-direction: row-reverse;
+    margin-top: 1vw;
+}
+.help button {
+    border-radius: 35%;
 }
 .help img {
     width: 5vw;

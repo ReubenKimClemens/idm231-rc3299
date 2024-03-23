@@ -10,73 +10,73 @@ const signs = [
         first: [3, 21],
         last: [4, 19],
         sign: 'Abomination',
-        text: "There is nothing an Aries cannot achieve once they set their mind to it—no mountain is too high. However, you will also find them nursing a hidden imposter syndrome that can chip away at their confidence if allowed free rein. "
+        text: "Beaten, branded and imprisoned for untold decades, this furtive vagrant hides a terrible secret. The Eldritch poison coursing through his veins has given him unspeakable power, at a terrible cost. As his form changes, so too does his role in combat!"
     },
     {
         first: [4, 20],
         last: [5, 20],
         sign: 'Antiquarian',
-        text: "Loyal to a fault, a Taurean is the most reliable person you can have in your corner when the chips are down. However, they have a stubborn streak a mile wide and can hold a grudge like no one else, so make sure you don't cross them. "
+        text: "A scholar, researcher, and keen archaeologist, The Antiquarian is not well suited for combat. She is, however, an expert in self-preservation - by making herself scarce in a fight, or demanding an ally protect her, she ensures her survival. If direct combat is unavoidable, The Antiquarian can use her fulminating censer to heal and invigorate allies...and to toxify attackers."
     },
     {
         first: [5, 21],
         last: [6, 20],
         sign: 'Arbalest',
-        text: "Throw a Gemini to the wolves, and they will come back leading the pack—the air element in this sign means that they can adapt easily to any situation. But their fuse runs short and once they run out of patience with someone, there is no wiggle room for second chances. "
+        text: "A runaway turned soldier, the Arbalest is the definitive backline fighter. Able to rain suppressing fire down on the enemy, snipe high profile targets and apply powerfully effective first-aid, she is a rallying point, a turret, a beacon in the dark."
     },
     {
         first: [6, 21],
         last: [7, 22],
         sign: 'Bounty Hunter',
-        text: "Behind the brooding fortress that a Cancer has erected to protect themselves are abundant reserves of deep, undying love and loyalty. Pity that few will get to experience it because they aren’t the best at communicating what is in their hearts. "
+        text: "A brutally efficient single-target executioner and crowd control specialist. For the Bounty Hunter, planning is key - mark targets for bonus damage or look for opportunities to capitalize on a stunned foe. He can also wreak havoc on an enemy party's order using his grappling hook, flashbangs and powerful uppercut."
     },
     {
         first: [7, 23],
         last: [8, 22],
         sign: 'Crusader',
-        text: "Born to be under the spotlight, there is nothing that this lion enjoys as much as being the cynosure of all eyes. However, this innate conviction that they are always in the right means that they can often run roughshod over others’ feelings and sentiments. "
+        text: "Battle-hardened and stalwart, the Crusader has held the front lines in a hundred holy wars. He either attacks foes head-on with righteous fury, or embraces a melee support role by leveraging his powerful defensive buffs & off-heals."
     },
     {
         first: [8, 23],
         last: [9, 22],
         sign: 'Grave Robber',
-        text: "Meticulous, organised and diligent, if the world were to end tomorrow, you would want a Virgo to lead the march into the new dawn. However, that pesky niggle of self-doubt in their head means that they are often harsher on themselves than anybody else can be. "
+        text: "The Grave Robber is a versatile and nimble combatant, moving back and forth through the ranks with ease. She strikes without warning and retreats to the shadows, continuing her assault at range. If her throwing daggers and poison darts aren't getting the job done, she can return to the melee, buffed and slinging her pickaxe!"
     },
     {
         first: [9, 23],
         last: [10, 22],
         sign: 'Hellion',
-        text: "If you are looking for someone to lend a comforting shoulder during times of distress and truly put themselves in your shoes, ring up the first Libra in your contacts. This empathetic side of theirs can sometimes get derailed by their inability to make up their mind, compounded by a fear of confrontations, which means that you never truly know which side they stand on."
+        text: "Wild, unpredictable, and utterly ruthless, the Hellion thrills to the spilling of blood! Her massive glaive affords her impressive reach in combat, while its razor sharp edge leaves lasting wounds on enemies. Versatile and unrelenting, she can hit the back row with her blade and devastate her foes. Certain skills leave her exhausted, however, and she may occasionally need to take a turn to recharge her adrenaline before entering the fray once again."
     },
     {
         first: [10, 23],
         last: [11, 21],
         sign: 'Highwayman',
-        text: "The fiery, intense personality of a Scorpio can make any time spent together a wild, dizzying ride. But while they will go the extra mile to take care of your emotional needs, they remain notoriously secretive about their own—good luck cracking open the spine of this closed book. "
+        text: "A rogue, a thug and a thief, the Highwayman has honed his skills with dirk and flintlock to devastating effect. Whether at range or in a melee, he is equally effective at dispatching his foes. Be it a grapeshot area-of-effect, or single target bleed, the Highwayman's skills focus solely on dealing damage in a variety of ways."
     },
     {
         first: [11, 22],
         last: [12, 21],
         sign: 'Hound Master',
-        text: "There is no storyteller quite like a Sagittarius—they can have the entire room hanging on their every word. But while they can show you grand dreams, it can sometimes be hard to pin them down and make them deliver on their promises. "
+        text: "A tough and uncommonly compassionate ex-lawman, the Houndmaster and his faithful Wolfhound work in tandem to bring down their enemies and protect the innocent. Together they stalk the back ranks, bursting forth in a flurry of harrying bleeds, gnashing teeth, and stunning blows. Should the tide of battle turn, the pair can support an ailing party by protecting the weak, and rallying the stressed."
     },
     {
         first: [12, 22],
         last: [1, 19],
         sign: 'Jester',
-        text: "Not everyone can conquer the world but if a Cap were to set out to do it, nothing would deter them until they had accomplished their goal. With a personality that is hardwired in practicality, they can often fail to appreciate nuance and are known to be unforgiving of others’ mistakes. "
+        text: "Combat is a power ballad - a slow build up, and a grand finale! On the offense, the Jester leaps to and fro in a bloody cacophony, positioning himself for a glorious end in the front ranks! Alternatively, he can hang back, delivering chilling melodies and unsettling riffs that terrorize his foes, and give strength to his allies."
     },
     {
         first: [1, 20],
         last: [2, 18],
         sign: 'Leper',
-        text: "A deep-thinker with a humanitarian streak, an Aquarian has grand plans to change the world. Shame that they left the party early though because their reclusive nature makes it hard for them to establish bonds with those around them. "
+        text: "A ruined man, a warrior, and a poet. The Leper is most effective when given a turn to focus himself before raising his massive blade. When he swings, it is all or nothing - crushing blows and massive damage or the empty whistling of a glancing blow. He is entirely self-sufficient, drawing strength from his life of trauma, and able to channel it into healing, protection, or unrelenting fury."
     },
     {
         first: [2, 19],
         last: [3, 20],
         sign: 'Man At Arms',
-        text: "If you are looking to escape the mundane everyday grind, a Pisces’s imaginative mind can whisk you away into a realm of fantasy. Their kind, nurturing personality can prove to be a double-edged sword though, because their overtly sensitive heart is easily wounded, further compounded by a tendency to play the victim."
+        text: "The Man-at-Arms is a seasoned veteran of combat, and has been rewarded for his toil with haunting guilt and stoic resilience in equal measure. Immovable, commanding, and focused, the Man-at-Arms breaks down enemy lines with his mace, buckler, and furious battle cries."
     },
 ]
 
