@@ -81,13 +81,13 @@ const signs = [
 ]
 
 document.querySelector('#signButton').addEventListener('click', getDate, false);
-const clickedSign = document.querySelectorAll('.signs section div');
+const clickedSign = document.querySelectorAll('.signs div');
 
 let i = 0;
 for (const sign of clickedSign) {
-    if (sign.textContent == signs[i].sign) {
+    if (sign.textContent.trim() == signs[i].sign) {
         sign.addEventListener('click', function(){
-            activeSign(sign.textContent);
+            activeSign(sign.textContent.trim());
         }, false);
     }
     i++;
@@ -137,14 +137,30 @@ function findSign(month, day) {
 
 */
 function activeSign(sign) {
-    const title = document.querySelector('.card h2');
-    const description = document.querySelector('.card p');
-    const image = document.querySelector('.card img');
+    const title = document.querySelector('.info h2');
+    const description = document.querySelector('.info p');
+    const image = document.querySelector('.info img');
     for (let i = 0; i < 12; i++) {
         if (sign == signs[i].sign) {
             title.textContent = signs[i].sign;
             description.textContent = signs[i].text;
             image.src = `images/${signs[i].sign}.jpg`;
         }
+    }
+}
+
+function signSound(sign) {
+    const soundSource = document.querySelector('#audioPlayer').src = "" + sign + "";
+
+}
+
+document.querySelector('.help').addEventListener('click', helpFeature, false);
+
+function helpFeature() {
+    var x = document.querySelector(".help-info");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
     }
 }

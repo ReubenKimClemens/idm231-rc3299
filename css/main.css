@@ -15,49 +15,116 @@ html {
     font-size: 100%;
 }
 
-header {
-    text-align: center;
+.col-1 div {
+    grid-area: col-1;
+}
+.col-2 div {
+    grid-area: col-2;
+}
+.col-3 div {
+    grid-area: col-3;
+}
+.col-4 div {
+    grid-area: col-4;
 }
 
-article {
-    width: 30vw;
-    float: right;
-    margin: 2rem;
-    background-color: lightblue;
-    height: max-content;
+.signs div {
+    width: 14vw;
+    height: 14vw;
+    position: relative;
+}
+.signs h2 {
+    position: absolute;
+    font: 3vw bold;
+    color: white;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
-.formArea {
-    width: 60vw;
+.signs img{
+    width: 14vw;
+    height: 14vw;
 }
 
 .signs {
-    width: 60vw;
-    float: left;
+    grid-area: signs;
     display: grid;
-    grid-template-columns: auto auto auto;
-    background-color: #05061f;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    'col-1 col-2 col-3 col-4',
+    'col-1 col-2 col-3 col-4',
+    'col-1 col-2 col-3 col-4',
+    'col-1 col-2 col-3 col-4',
+    'col-1 col-2 col-3 col-4';
+    width: 56vw;
+    float: left;
+    margin-left: 2vw;
 }
 
-.signs > section div{
-    background-color: blue;
-    color: white;
+.formAndInfo {
+    grid-area: form-and-info;
+    display: flex;
+    flex-direction: column;
+    width: 38vw;
+    margin-right: 2vw;
+}
+.formAndInfo h2 {
     text-align: center;
-    font-size: .75rem;
-    width: 7.59548611vw;
-    height: 15.8802178vh;
-    border: 1px solid white;
-    margin: 1.8vw;
+    margin-top: 1vw;
 }
-
-.card > h2, .card > p {
-    text-align: center;
-}
-
-.card > img {
+.formAndInfo img {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 36.29764065335753vh;
-    height: 17.36111111111111vw;
+    width: 50%;
+    margin: 0 auto 1vw auto;
 }
+
+header {
+    text-align: center;
+    padding: 0 0 1vw 0;
+    background-color: black;
+    color: #FFFFFF;
+}
+
+.help {
+    position: absolute;
+    bottom: 1vw;
+    right: 1vw;
+}
+.help img {
+    width: 5vw;
+    height: 5vw;
+}
+
+.help-info {
+    display: none;
+}
+
+.help-info {
+    position: absolute;
+    width: 40vw;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: beige;
+    padding: 2.5vw;
+    border-radius: 15%;
+}
+
+.help-info p {
+    margin:  0 0 1rem 0;
+}
+
+#rules p {
+    margin:  0 0 .5rem 0;
+}
+
+#rules p:first-child {
+    font-weight: bold;
+    margin:  0 0 .1rem 0;
+}
+
+#rules p:last-child {
+    margin:  0 0 2rem 0;
+}
+
