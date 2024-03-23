@@ -87,9 +87,8 @@ header {
 }
 
 .help {
-    position: absolute;
-    bottom: 1vw;
-    right: 1vw;
+    display: flex;
+    flex-direction: row-reverse;
 }
 .help img {
     width: 5vw;
@@ -102,13 +101,29 @@ header {
 
 .help-info {
     position: absolute;
-    width: 40vw;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    width: 40vw;
     background-color: beige;
     padding: 2.5vw;
     border-radius: 15%;
+}
+
+@media (width <= 1400px) {
+    .help-info {
+        top: 20%;
+        transform: translate(-50%, -10%);
+        width: 45vw;
+    }
+}
+
+@media (width <= 1000px) {
+    .help-info {
+        top: 10%;
+        transform: translate(-50%, -10%);
+        width: 50vw;
+    }
 }
 
 .help-info p {
